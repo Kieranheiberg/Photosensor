@@ -2,8 +2,8 @@
 
 ## Rubrum equation
 
-OD = -0.631 * ln(V) + 0.2489
+OD = -0.586 * math.log(Voltage) + 0.2872 
 
 ## CBS
 
-OD = -0.631 * ln(V) + 0.2489
+OD = -0.631 * math.log(Voltage) + 0.2489
