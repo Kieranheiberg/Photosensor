@@ -15,10 +15,10 @@ From Photosensor:VCC wire goes to VS, GND goes to GND, and OUT goes to AIN0     
 either:
 - Run program by executing RunPhotosensor.bat   [Need to edit .bat file and change file dircetory to folder of Export_csv.py first. Double click on file to execute]
   
-- Run following in command prompt:   ['>>>' indicates command prompt code]
-   >>> conda activate labjack          [Should now see '(labjack)' in front of prompt. Only needed if using a virtual enviroment]
-   >>> cd 'Export_csv directory'   [Folder where Export_csv.py and Equations.json are saved]
-   >>> python Export_csv.py
+- Run following in command prompt:   
+   conda activate labjack          [Should now see '(labjack)' in front of prompt. Only needed if using a virtual enviroment]
+   cd 'Export_csv directory'   [Folder where Export_csv.py and Equations.json are saved]
+   python Export_csv.py
 
 # Troubleshooting
 If seeing 'device not found. Test Voltage set to 1' LabJack device is not plugged into computer properly. Program will still run by wont give readings. Deesigned for running code without device nearby
