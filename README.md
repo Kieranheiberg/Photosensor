@@ -17,7 +17,7 @@ either:
   
 - Run following in command prompt:   
    - 'conda activate labjack'          [Should now see '(labjack)' in front of prompt. Only needed if using a virtual enviroment]
-   - 'cd 'Export_csv directory' '   [Folder where Export_csv.py and Equations.json are saved]
+   - 'cd "Export_csv directory" '   [Folder where Export_csv.py and Equations.json are saved]
    - 'python Export_csv.py'
 
 # Troubleshooting
