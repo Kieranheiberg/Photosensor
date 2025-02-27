@@ -39,7 +39,7 @@ either:
    - 'python Export_csv.py'
 
 # Troubleshooting
-- If seeing 'device not found. Test Voltage set to 1'. LabJack device is not plugged into computer properly. Program will still run by Voltage will be set to 1 V rather then variable depending on OD of sample. Deesigned for running and imporving code without device nearby.
+- If seeing 'device not found. Test Voltage set to 1'. LabJack device is not plugged into computer properly. Program will still run but Voltage will be set to 1 V rather then variable depending on OD of sample. Deesigned for running and imporving code without device nearby.
 - If RunPhotosensor.bat not working, open in notepad and make sure "CD 'file dricetory'" is set to folder where Export_csv.py and Equations.json are saved
 - If error surrounding processing json check to make sure no comma after last calibration equation is 'Equations.json' as this will will cause file to expect another equation that is not there throwing an error
 
