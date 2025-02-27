@@ -23,7 +23,7 @@
 4. Ensure LabJackPython package is installed to virtual enviroment.         [Run 'pip install LabJack' to install]
 5. Change directory in RunPhotosensor.bat to where Export_csv and Equations are saved
 
-The OD value returned for each sample is calculated by taking a OD value every 0.1 s for a duration of 1s then finding average. The duration and interval of readings are set at 1s and 0.1 s by defualt. These lengths can be changed by chnaging value of 'interval' and are set at thh top of Export_csv.py file and can be easily modified by editing code in notepad.  
+The OD value returned for each sample is calculated by taking a OD value every 0.1s interval for a total duration of 1s then finding average. The duration and interval of readings are set at 1s and 0.1s by default. These lengths can be modified by changing value of 'interval' and 'duration' variables at the top of Export_csv.py file. Can be easily modified by editing code in notepad.  
 
 # Sensor Setup
 From LED: Red in FIO6, white in GND and make sure screw terminal is tight. 
