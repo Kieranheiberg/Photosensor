@@ -10,5 +10,8 @@ python Export_csv.py
 :: Deactivate the virtual environment after the script finishes
 call conda deactivate
 
-:: Exit the batch file
-exit
+:: Prints message letting user know Export_csv.py program has finished running
+echo Program finished
+
+:: Leaves command prompt window open in case user wants to review printed sample data. Failsafe incase of unsuccessful save and need to see data
+pause >nul
