@@ -1,12 +1,18 @@
 ## Photosensor
 ## Using program
 - Once export_csv.py is running should see: 
-  -'Device Found. Press Enter to start data collection. Use Ctrl+C to exit program at any time'
+  - 'Device Found. Press Enter to start data collection. Use Ctrl+C to exit program at any time'
 - Pressing enter wil prompt for sample type. All existing sample types will be listed in the parenthesis.These names are pulled dircetly from the Equations.json file. 
-- Enter name of current sample. If you enter a new sample name, system will return 'Sample type not found. New species type? (y/n)'. If you type 'n' system will disregard enetred name and prompt for new one. If 'y' entered then will be asked 'Enter Voltage to OD equation:'. Equation must be entered using 'Voltage' variable (ex. '25*Voltage + 26') Math.log must be used for natural log function (ex. '0.988*Math.log(Voltage) + 0.674'). System will return 'Equation saved' if equation is successfully saved. You can view all exisitng calibration equations in Equations.json file. Equations can be added or modified inside Equations.json as well and will auto update when running export_csv.py file. Suggested method for new calibration equations is to add it inside Equations.json file for easier editing and to see syntax of preexisiting valid calibration equations. 
+- Enter name of current sample.
+  - If you enter a new sample name, system will return 'Sample type not found. New species type? (y/n)'. If you type 'n' system will disregard enetred name and prompt for new one. If 'y' entered then will be asked 'Enter Voltage to OD equation:'. Equation must be entered using 'Voltage' variable (ex. '25*Voltage + 26') Math.log must be used for natural log function (ex. '0.988*Math.log(Voltage) + 0.674'). System will return 'Equation saved' if equation is successfully saved. You can view all exisitng calibration equations in Equations.json file.
+  - Equations can be added or modified inside Equations.json as well and will auto update when running export_csv.py file. Suggested method for new calibration equations is to add it inside Equations.json file for easier editing and to see syntax of preexisiting valid calibration equations. 
 - Once valid sample type entered, sensor will take reading and then print sample number, Time of reading, Type of sample, and Average OD value. These values are saved to an array so no need to copy them down.
-- System will ask 'Press Enter for another sample [type 'exit' to finish. type 'new' to change type]'. Pressing enter will record OD of another sample of same type as (if type is 'redrum' pressing enter will record OD value of another redrum sample). Input of 'exit' will end sampling and take you to saving screen. Input of 'new' will allow user to change sample type. 
-- Exit prompt will ask user to save data as csv file. (WARNING: if you enter 'n' for saving data prompt there is no way to access collected data unless you manually scroll through prompts and record printed values for each sample. This is not recommended as it is much more intensive then saving as csv file). You can then enter name for the csv file. Entering name of preexisting csv file will append data to the exisiting csv file.
+- System will ask 'Press Enter for another sample [type 'exit' to finish. type 'new' to change type]'.
+  - Pressing enter will record OD of another sample of same type as (if type is 'redrum' pressing enter will record OD value of another redrum sample).
+  - Input of 'exit' will end sampling and take you to saving screen.
+  - Input of 'new' will allow user to change sample type. 
+- Exit prompt will ask user to save data as csv file. (WARNING: if you enter 'n' for saving data prompt there is no way to access collected data unless you manually scroll through prompts and record printed values for each sample. This is not recommended as it is much more intensive then saving as csv file). You can then enter name for the csv file.
+  - Entering name of preexisting csv file will append data to the exisiting csv file.
 - Csv file is saved to the same directory where Export_csv.py file is saved.
 
 
