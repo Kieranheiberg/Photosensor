@@ -3,15 +3,15 @@
 # Config
 1. Download RunPhotosensor.bat, Export_csv.py, Equations.json
 2. Export_csv.py and Equations.json need to be in same file. RunPhotosensor can exist anyway         [Suggested on desktop]
-3. Create conda virtual enviroment named labjack
-4. Ensure LabJackPython package is installed to virtual enviroment.         [Run 'pip install LabJack' to install]
-5. Change directory in RunPhotosensor.bat to where Export_csv and Equations are saved
+3. Change directory in RunPhotosensor.bat to where Export_csv and Equations are saved
+4. Create conda virtual enviroment named labjack 
+5. Ensure LabJackPython package is installed to virtual enviroment.         [Run 'pip install LabJack' to install while in virtual enviroment]
 
 The OD value returned for each sample is calculated by taking a OD value every 0.1s interval for a total duration of 1s then finding average. The duration and interval of readings are set at 1s and 0.1s by default. These lengths can be modified by changing value of 'interval' and 'duration' variables at the top of Export_csv.py file. Can be easily modified by editing code in notepad.  
 
 # Sensor Setup
-From LED: Red in FIO6, white in GND and make sure screw terminal is tight. 
-From Photosensor:VCC wire goes to VS (green), GND goes to GND (blue), and OUT goes to AIN0 (purple)       [Wires should be in order and not twisted]
+- From LED: Red in FIO6, white in GND and make sure screw terminal is tight. 
+- From Photosensor:VCC wire goes to VS (green), GND goes to GND (blue), and OUT goes to AIN0 (purple)       [Wires should be in order and not twisted]
 
 # Starting Export_csv.py
 either:
