@@ -1,6 +1,7 @@
-## Photosensor
+# OD Sensor
+Used simple electronics and 3D printed parts to make an optical density sensor for measuring OD of anaerobic bacteria in Hungate tubes. OD Sensor works by shining an LED through a 3D-printed tube holder to a Photosensor on the opposing side. Photosensor returns a voltage value that is proportional to the OD of the sample
 
-# Config
+## Config
 1. Download RunPhotosensor.bat, Export_csv.py, Equations.json
 2. Export_csv.py and Equations.json need to be in same file. RunPhotosensor can exist anyway         [Suggested on desktop]
 3. Change directory in RunPhotosensor.bat to where Export_csv and Equations are saved
@@ -9,11 +10,11 @@
 
 The OD value returned for each sample is calculated by taking a OD value every 0.1s interval for a total duration of 1s then finding average. The duration and interval of readings are set at 1s and 0.1s by default. These lengths can be modified by changing value of 'interval' and 'duration' variables at the top of Export_csv.py file. Can be easily modified by editing code in notepad.  
 
-# Sensor Setup
+## Sensor Setup
 - From LED: Red in FIO6, white in GND and make sure screw terminal is tight. 
 - From Photosensor:VCC wire goes to VS (green), GND goes to GND (blue), and OUT goes to AIN0 (purple)       [Wires should be in order and not twisted]
 
-# Starting Export_csv.py
+## Starting Export_csv.py
 Either:
 - Start program by executing RunPhotosensor.bat [Need to edit .bat file and change file directory to folder of Export_csv.py first. Double click on file to execute]
 Or: 
@@ -22,7 +23,7 @@ Or:
    - 'cd "Export_csv directory" '   ["Export_csv directory" is directory to the folder where Export_csv.py and Equations.json are saved]
    - 'python Export_csv.py'
  
-## Using program
+## Using Program
 - Once Export_csv.py is running should see: 
   - 'Device Found. Press Enter to start data collection. Use Ctrl+C to exit program at any time'
 - Pressing enter wil prompt for sample type. All existing sample types will be listed in the parenthesis.These names are pulled dircetly from the Equations.json file. 
