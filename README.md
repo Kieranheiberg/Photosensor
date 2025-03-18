@@ -14,16 +14,16 @@ The OD value returned for each sample is calculated by taking a OD value every 0
 - From Photosensor:VCC wire goes to VS (green), GND goes to GND (blue), and OUT goes to AIN0 (purple)       [Wires should be in order and not twisted]
 
 # Starting Export_csv.py
-either:
-- Start program by executing RunPhotosensor.bat [Need to edit .bat file and change file dircetory to folder of Export_csv.py first. Double click on file to execute]
-  
+Either:
+- Start program by executing RunPhotosensor.bat [Need to edit .bat file and change file directory to folder of Export_csv.py first. Double click on file to execute]
+Or: 
 - Run following in command prompt:   
    - 'conda activate labjack'          [Should now see '(labjack)' in front of prompt. Only needed if using a virtual enviroment]
    - 'cd "Export_csv directory" '   ["Export_csv directory" is directory to the folder where Export_csv.py and Equations.json are saved]
    - 'python Export_csv.py'
  
 ## Using program
-- Once export_csv.py is running should see: 
+- Once Export_csv.py is running should see: 
   - 'Device Found. Press Enter to start data collection. Use Ctrl+C to exit program at any time'
 - Pressing enter wil prompt for sample type. All existing sample types will be listed in the parenthesis.These names are pulled dircetly from the Equations.json file. 
 - Enter name of current sample.
