@@ -43,7 +43,7 @@ either:
 ### Hardware
 - If LED blinking or inconsistent take off case and make sure cable coming from LED is not being bent akwardly by the case
 - If receiving a constant OD value ensure that the contacts coming from the photosensor are secure. Also ensure the wires are going from the correct terminal to the correct port on the LabJack device. It should be 'VCC' to [VS], 'GND' to [GND], and 'OUT' to [AIN0]. Where the name in '' is the photosensor port name and [] is the labjack terminal name.
-  - Use LJControlPanel to see voltage values at the ports to check that readings are accurate (LJControlPanel is part of labjack install package; Instructions for downloading in LabJack_Documentation.docx in misc folder of repository)
+  - Use LJControlPanel to see voltage values at the ports to check that readings are accurate (LJControlPanel is part of LabJack install package; Instructions for downloading in LabJack_U3_Documentation.docx in repository)
 
 ### Software
 - If seeing 'device not found. Test Voltage set to 1'. LabJack device is not being found by the computer. Ensure device is plugged into computer properly. Program will still run but Voltage will be set to 1 V permanently rather then variable depending on OD of sample. Designed for troubleshooting and debugging code without device nearby.
