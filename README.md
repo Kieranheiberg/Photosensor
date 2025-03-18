@@ -11,7 +11,7 @@ The OD value returned for each sample is calculated by taking a OD value every 0
 
 # Sensor Setup
 From LED: Red in FIO6, white in GND and make sure screw terminal is tight. 
-From Photosensor:VCC wire goes to VS, GND goes to GND, and OUT goes to AIN0        [update with colors of wires. Should be in order and not twisted]
+From Photosensor:VCC wire goes to VS (green), GND goes to GND (blue), and OUT goes to AIN0 (purple)       [Wires should be in order and not twisted]
 
 # Starting Export_csv.py
 either:
@@ -46,7 +46,7 @@ either:
   - Use LJControlPanel to see voltage values at the ports to check that readings are accurate (LJControlPanel is part of labjack install package; Instructions for downloading in LabJack_Documentation.docx in misc folder of repository)
 
 ### Software
-- If seeing 'device not found. Test Voltage set to 1'. LabJack device is not plugged into computer properly. Program will still run but Voltage will be set to 1 V rather then variable depending on OD of sample. Designed for running and improving code without device nearby.
+- If seeing 'device not found. Test Voltage set to 1'. LabJack device is not being found by the computer. Ensure device is plugged into computer properly. Program will still run but Voltage will be set to 1 V permanently rather then variable depending on OD of sample. Designed for troubleshooting and debugging code without device nearby.
 - If RunPhotosensor.bat not working, open in notepad and make sure "CD 'file directory'" is set to folder where Export_csv.py and Equations.json are saved
 - If error surrounding processing json check to make sure no comma after last calibration equation in 'Equations.json' as this will will cause file to expect another equation that is not there throwing an error
 
