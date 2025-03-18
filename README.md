@@ -38,8 +38,15 @@ either:
   - Entering name of preexisting csv file will append data to the exisiting csv file.
 - Csv file is saved to the same directory where Export_csv.py file is saved.
 
-# Troubleshooting
-- If seeing 'device not found. Test Voltage set to 1'. LabJack device is not plugged into computer properly. Program will still run but Voltage will be set to 1 V rather then variable depending on OD of sample. Deesigned for running and imporving code without device nearby.
-- If RunPhotosensor.bat not working, open in notepad and make sure "CD 'file dricetory'" is set to folder where Export_csv.py and Equations.json are saved
-- If error surrounding processing json check to make sure no comma after last calibration equation is 'Equations.json' as this will will cause file to expect another equation that is not there throwing an error
+## Troubleshooting
+
+# Hardware
+- If LED blinking or inconsistent take off case and make sure cable coming from LED is not being bent akwardly by the case
+- If receiving a constant OD value ensure that the contacts coming from the photosensor are secure. Also ensure the wires are going from the correct terminal to the correct port on the LabJack device. It should be 'VCC' to [VS], 'GND' to [GND], and 'OUT' to [AIN0]. Where the name in '' is the photosensor port name and [] is the labjack terminal name.
+  - Use LJControlPanel to see voltage values at the ports to check that readings are accurate (LJControlPanel is part of labjack install package; Instructions for downloading in LabJack_Documentation.docx in misc folder of repository)
+
+# Software
+- If seeing 'device not found. Test Voltage set to 1'. LabJack device is not plugged into computer properly. Program will still run but Voltage will be set to 1 V rather then variable depending on OD of sample. Designed for running and improving code without device nearby.
+- If RunPhotosensor.bat not working, open in notepad and make sure "CD 'file directory'" is set to folder where Export_csv.py and Equations.json are saved
+- If error surrounding processing json check to make sure no comma after last calibration equation in 'Equations.json' as this will will cause file to expect another equation that is not there throwing an error
 
