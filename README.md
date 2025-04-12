@@ -3,7 +3,7 @@ Used simple electronics and 3D printed parts to make an optical density sensor f
 
 ## Config
 1. Download RunPhotosensor.bat, Export_csv.py, Equations.json
-2. Export_csv.py and Equations.json need to be in same file. RunPhotosensor can exist anyway         [Suggested on desktop]
+2. Export_csv.py and Equations.json need to be in same folder. RunPhotosensor can exist anyway         [Suggested on desktop]
 3. Change directory in RunPhotosensor.bat to where Export_csv and Equations are saved
 4. Create conda virtual enviroment named labjack 
 5. Ensure LabJackPython package is installed to virtual enviroment.         [Run 'pip install LabJack' to install while in virtual enviroment]
@@ -41,12 +41,12 @@ Or:
 
 ## Troubleshooting
 
-### Hardware
+#### Hardware
 - If LED blinking or inconsistent take off case and make sure cable coming from LED is not being bent akwardly by the case
 - If receiving a constant OD value ensure that the contacts coming from the photosensor are secure. Also ensure the wires are going from the correct terminal to the correct port on the LabJack device. It should be 'VCC' to [VS], 'GND' to [GND], and 'OUT' to [AIN0]. Where the name in '' is the photosensor port name and [] is the labjack terminal name.
   - Use LJControlPanel to see voltage values at the ports to check that readings are accurate (LJControlPanel is part of LabJack install package; Instructions for downloading in LabJack_U3_Documentation.docx in repository)
 
-### Software
+#### Software
 - If seeing 'device not found. Test Voltage set to 1'. LabJack device is not being found by the computer. Ensure device is plugged into computer properly. Program will still run but Voltage will be set to 1 V permanently rather then variable depending on OD of sample. Designed for troubleshooting and debugging code without device nearby.
 - If RunPhotosensor.bat not working, open in notepad and make sure "CD 'file directory'" is set to folder where Export_csv.py and Equations.json are saved
 - If error surrounding processing json check to make sure no comma after last calibration equation in 'Equations.json' as this will will cause file to expect another equation that is not there throwing an error
