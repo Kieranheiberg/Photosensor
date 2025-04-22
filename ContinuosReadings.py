@@ -1,4 +1,4 @@
-# LED: White lead to ground. Red lead of LED connected to FIO7.
+# LED: White lead to ground. Red lead of LED connected to FIO7
 # Photosensor: Red lead to VS [Source voltage]. Silver/bare lead to Ground. White lead to AIN0 [output voltage].
 
 
