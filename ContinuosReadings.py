@@ -8,8 +8,8 @@ import time
 # Create a LabJack U3 object
 dev = u3.U3()
 
-# Set FIO7 as a digital output and send 3.3V to the LED
-dev.setDOState(7, 1) #Set FIO7 output to digital and high in one function; Sens power to LED red plugged into FIO7
+# Set FIO6 as a digital output and send 3.3V to the LED
+dev.setDOState(6, 0) #Set FIO6 output to digital and high in one function; Sens power to LED red plugged into FIO7
 
 
 # Read the photosensor output from AIN0 (connected to the sensor output)
@@ -28,8 +28,8 @@ except KeyboardInterrupt: #Use CTRl + C in terminal to stop
     print("Program interrupted by user.")
 
 # LED off
-dev.setDOState(7, 0)  # Low = 0 (0V) for FIO7 (turn off LED)
+dev.setDOState(6, 0)  # Low = 0 (0V) for FIO6 (turn off LED)
 
 
-#If using LJContolPanel, Photosensor volatge out port should be set to AIN (analog Input) and LED Output port should be set 
+#If using LJContolPanel, Photosensor volatge out port should be set to AIN0 (analog Input) and LED Output port should be set to FI06
 # to DO (Digital Output) with Volateg box checked (sets state to 1 and ouputs voltage to LED)

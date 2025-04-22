@@ -1,3 +1,4 @@
+
 # LED: White lead to ground. Red lead of LED connected to FIO7.
 # Photosensor: Red lead to VS [Source voltage]. Silver/bare lead to Ground. White lead to AIN0 [output voltage].
 
@@ -25,8 +26,7 @@ except:
     print("Test Voltage set to 1") 
     Voltage = 1
 
-# Set FIO7 as a digital output and send 3.3V to the LED
-if connected: dev.setDOState(6, 1)  # Set FIO7 output to digital and high in one function; Sens power to LED red plugged into FIO7
+# Set FIO6 as a digital output and send 3.3V to the LED
 
 
 #settings and initializations
@@ -36,6 +36,10 @@ Samples = []  # list to store samples
 
 
 def main():
+    if connected: 
+        LEDpin = FindLEDPinNumber() # Determine if anode of LED is connected to FIO6 or FIO7
+        dev.setDOState(LEDpin, 1)  # Set FIO6 output to digital and high in one function; Sends power to LED red plugged into FIO7
+
     sameType = False  # Initialize sameType variable
     input("Press Enter to start data collection. Use Ctrl+C to exit program at any time")
 
@@ -74,7 +78,7 @@ def main():
         print("Data not saved")
 
     # Turn off LED
-    if connected: dev.setDOState(6, 0)  # Low = 0 (0V) for FIO6 (turn off LED)
+    if connected: dev.setDOState(LEDpin, 0)  # Set LED to Low = 0 (0V). Tturn off LED
 
 
 
@@ -126,6 +130,26 @@ def ConvtoOD(Voltage, sample_type):
         OD = None
 
     return OD
+
+def FindLEDPinNumber():
+    """Find the pin number for the LED based on the connected device."""
+    pin = 6  # Default pin number for LED to be pugged into is FI06
+    
+    # Check if LED plugged into FI06
+    dev.setDOState(6, 1) # Set FIO6 high to turn on LED
+    time.sleep(0.3)  # Wait for the LED to turn on
+    if (dev.getAIN(0) > 0.5):  # Photosensor connected to AIN0. If it reads high voltage, LED is connected to FIO6
+        pin = 6
+    dev.setDOState(6,0)
+    
+    # Check if LED plugged into FIO7
+    dev.setDOState(7, 1) # Set FIO7 high to turn on LED
+    time.sleep(0.3)
+    if (dev.getAIN(0) > 0.5):  # If it reads high voltage, LED is connected to FIO7
+        pin = 7
+    dev.setDOState(7,0)
+   
+    return pin
 
 def new_equation(sample_type):
     """Save new calibration equation to a JSON file."""
