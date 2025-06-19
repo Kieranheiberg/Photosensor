@@ -1,6 +1,8 @@
 # OD Sensor
 Used simple electronics and 3D printed parts to make an optical density sensor for measuring optical denisty (OD) of anaerobic bacteria in test tubes. OD Sensor works by shining an LED through a 3D-printed tube holder to a Photosensor on the opposing side. Photosensor returns a voltage value that is proportional to the OD of the sample.
-Photosensor functions by acting as variable resistor that responds to amount of light received. Lots of light on sensor = lots of resistance = low voltage = high OD value. Low light on photosensor = minimal resistance = high voltage = low OD value.
+Photosensor functions by acting as variable resistor that responds to amount of light received.  
+Lots of light on sensor = lots of resistance = low voltage = high OD value.  
+Low light on photosensor = minimal resistance = high voltage = low OD value.
 
 ## V1 Labjack
 First version. Utilizes LabJack U3 data aquisition device (DAQ) to power photosensor and LED. Voltage from photosensor connected to analog port on Labjack DAQ. DAQ is connected to laptop running Python script (export_csv.py in V1 Labjack folder).
