@@ -6,6 +6,11 @@ Lots of light on sensor = lots of resistance = low voltage = high OD value.  <p>
 Low light on photosensor = minimal resistance = high voltage = low OD value. <p>
 </div>
 
+## Project Libraries
+All neccessary python libraries for both V1 and V2 can be installed with the following command:
+<p align="center"> **pip install -r requirements.txt** </p>
+
+
 ## V1 Labjack
 First version. Utilizes LabJack U3 data aquisition device (DAQ) to power photosensor and LED. Voltage from photosensor connected to analog port on Labjack DAQ. DAQ is connected to laptop running Python script (export_csv.py in V1 Labjack folder).
 Export_csv.py has user specify which species is being measured and then polls voltage reading from Labjack DAQ. Species options pulled from Equations.json file that contains calibration equations to convert voltage to optical density for each bacteria species.
