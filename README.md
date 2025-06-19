@@ -8,7 +8,7 @@ Low light on photosensor = minimal resistance = high voltage = low OD value. <p>
 
 ## Project Libraries
 All neccessary python libraries for both V1 and V2 can be installed with the following command:
-<p align="center"> **pip install -r requirements.txt** </p>
+**<p align="center"> **pip install -r requirements.txt** </p>**
 
 
 ## V1 Labjack
