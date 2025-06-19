@@ -21,4 +21,16 @@ Field 4 = tinterval (measurement time interval)
 Max Num, Max Time, and tinterval all set by external python script (setExperimentalParameters.py in V2 CLoud folder). Code on Seeed device polls a voltage value every tinterval seconds until Max Time or Max Num is reached then LED will blink 4 times before turning off. Voltage values uploaded to thingspeak field 1 in real time (include link to thingspeak channel). downloadData.py (in V2 Cloud folder) downloads voltage data from thingspeak channel, converts it to OD values (using Equations.json), and then formats it into an easy to read csv file.
 
 ## Coming soon
-Implementing orbital shaker (for gas exchange) and red LED array (to improve bacteria growth) to OD sensor for full autonomous functionality. Both plugged into to Adafruit IoT relay controlled by digital output pin on Seeed microcontroller. Seeed will manage timing so that LED array and orbital shaker will remain on until OD measurment wanted, then Seeed board will turn off IoT relay (and therefore LED array and orbital shaker), turn on measurement LED, get voltage value proportioanl to OD of sample, upload voltage value to online thingspeak channel, then restart orbital shaker and growth LED array.
+Implementing orbital shaker (for gas exchange) and red LED array (to improve bacteria growth) to OD sensor for full autonomous functionality. Both plugged into to Adafruit IoT relay controlled by digital output pin on Seeed microcontroller. Seeed will manage timing so that LED array and orbital shaker will remain on until OD measurment wanted. Functionality/timing all managed via Seeed microcontroller and is as follows:
+
+1. Seeed board will turn on IoT relay (and therefore LED array and orbital shaker)
+2. Wait preset measurment interval time (tinterval in thingspeak channel)
+4. IoT relay turned off via Seeed pin set to digital output (and therefore turns off LED array and orbital shaker)
+5. Measurement LED (for determing OD) turned on via Seeed pin set to digital output
+6. Photosensor voltage value measured via Seeed pin set to analog input (measured voltage is proportioanl to OD of sample)
+7. Voltage value uploaded to online ThingSpeak channel (field 1)
+8. Seeed turns off measurement LED
+9. Restarts orbital shaker and growth LED array by turning on IoT relay
+10. Repeat until Max Num or Max Time reached (set by setExperimentalParameters.py or by hard coding code.py in CIRCUITPY folder of Seeed)
+11. LED blinks 4x times to indicate termination then turns off
+    
