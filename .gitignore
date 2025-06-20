@@ -1,0 +1,17 @@
+# virtual enviroments
+.venv/
+
+# any pycache file in folder
+**/__pycache__/
+
+#downloaded data
+thingspeak_data.csv
+
+# ignores files containing API keys or wifi info. Ensures sensitive data doesn't get uploaded to public GitHub repo
+
+# API keys saved to Seeed microcontroller
+V2 Cloud/Seeed XIAO ESP32S3 Microcontroller Files/thingspeak_info.py #thingspeak API keys
+V2 Cloud/Seeed XIAO ESP32S3 Microcontroller Files/wifi_info.py #wifi SSID's and PW's
+
+# V2 folder API key file
+V2 Cloud/config.py
