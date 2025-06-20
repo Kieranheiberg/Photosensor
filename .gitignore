@@ -15,3 +15,5 @@ V2 Cloud/Seeed XIAO ESP32S3 Microcontroller Files/wifi_info.py #wifi SSID's and 
 
 # V2 folder API key file
 V2 Cloud/config.py
+V2 Cloud/Seeed XIAO ESP32S3 Microcontroller Files/thingspeak_info.py
+V2 Cloud/Seeed XIAO ESP32S3 Microcontroller Files/wifi_info.py
