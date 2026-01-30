@@ -94,8 +94,6 @@ duration = 1 #seconds
 
 ## Troubleshooting
 Any questions regarding device opertaion or functionality can be directed to Kieran Heiberg  
-Email: kieran.f.heiberg@hotmail.com, kheiberg@uw.edu  
-Phone: +1 (425) 281-5745  
   
 Diego Alba Burbano, Michael Guzman, Jackson Comes, Amanda Roberts, and Margaret Cook also have experience using device 
 #### Hardware
