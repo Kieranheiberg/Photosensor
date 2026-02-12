@@ -1,14 +1,8 @@
 :: Navigate to the directory where your virtual environment and Python file are located
-cd /d "C:\Users\kiera\OneDrive\Documents\GitHub\Photosensor"
-
-:: Activate the virtual environment
-call conda activate labjack
+cd "C:\Users\kiera\OneDrive\Documents\GitHub\Photosensor\V1 Labjack"
 
 :: Run the Python script
 python Export_csv.py
-
-:: Deactivate the virtual environment after the script finishes
-call conda deactivate
 
 :: Prints message letting user know Export_csv.py program has finished running
 echo Program finished
