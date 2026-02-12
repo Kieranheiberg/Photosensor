@@ -1,6 +1,6 @@
 {
     "redrum": "-0.586 * math.log(Voltage) + 0.2872",
     "cbs": "-0.631 * math.log(Voltage) + 0.2489",
-    "ln": "math.log(Voltage)",
+    "palustris": "-0.68 * math.log(Voltage) + 0.8628",
     "MaxV": "1.7"
 }
