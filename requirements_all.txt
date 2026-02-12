@@ -1,5 +1,0 @@
-labjackpython
-
-requests
-
-pytz

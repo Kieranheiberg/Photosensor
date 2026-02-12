@@ -1,5 +1,5 @@
 :: Navigate to the directory where your virtual environment and Python file are located
-cd "C:\Users\kiera\OneDrive\Documents\GitHub\Photosensor\V1 Labjack"
+cd "C:\Users\kiera\OneDrive\Documents\GitHub\Photosensor\K-Bot"
 
 :: Run the Python script
 python Export_csv.py
